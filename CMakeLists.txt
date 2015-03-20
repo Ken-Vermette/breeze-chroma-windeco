@@ -1,4 +1,13 @@
-add_definitions(-DTRANSLATION_DOMAIN="breeze_kwin_deco")
+find_package(ECM 0.0.9 REQUIRED NO_MODULE)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
+
+include(ECMInstallIcons)
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings)
+include(GenerateExportHeader)
+
+# add_definitions(-DTRANSLATION_DOMAIN="breeze_kwin_deco")
 
 find_package(KDecoration2 REQUIRED)
 find_package(KF5 REQUIRED COMPONENTS CoreAddons ConfigWidgets WindowSystem)
